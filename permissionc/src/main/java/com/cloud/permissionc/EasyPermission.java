@@ -97,9 +97,7 @@ public class EasyPermission {
             throw new IllegalArgumentException("请求的权限不能为空.");
         }
 
-        Log.d("xb.zou", "request: 111111");
         PermissionUtil.checkTargetSdkVersion(mActivity, mPermissions);
-        Log.d("xb.zou", "request: 222222");
         List<String> failPermissions = PermissionUtil.getFailPermissions(mActivity, mPermissions);
         if (failPermissions == null || failPermissions.size() == 0) {
             //权限都授权过
